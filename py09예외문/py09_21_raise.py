@@ -6,7 +6,7 @@
 # NameError: HiThere
 
 try:
-    raise NameError("Hi There")
+    raise NameError("HiThere")
 except NameError:
     print("An exception flew by!")
     raise

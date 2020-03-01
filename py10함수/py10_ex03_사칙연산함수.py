@@ -28,16 +28,16 @@ y = int(y)
 
 # Add 함수 호출
 value = Add(x, y)
-print("Add:", value)  # Add() 결과 출력
+print("Add :", value ) # Add() 결과 출력 
 
 # Minus 함수 호출
 value = Minus(x, y)
-print("Minus:", value)
+print("Minus :", value ) # Minus() 결과 출력 
 
 # Mul 함수 호출
 value = Mul(x, y)
-print("Mul:", value)
+print("Mul :", value ) # Mul() 결과 출력 
 
 # Div 함수 호출
 value = Div(x, y)
-print("Div:", value)
+print("Div :", value ) # Div() 결과 출력 

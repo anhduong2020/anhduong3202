@@ -20,12 +20,16 @@ print("첫번째 b 문자의 위치는:", pos1)
 
 # 문자열에 "Dog"가 있으면 "Dog있음"을 없으면 "Dog없음" 을 출력하시오
 # "Dog 있음"
-
+findDog = prov.find("Dog")
+if findDog == -1:
+    print("Dog없음")
+else:
+    print("Dog있음")
 
 # 문자열 치환: replace()
 # prov 문자열에 Dog가 들어 있으면 Cat으로 바꾸어 출력하고
 # 아니면 prov 출력하시오.
-if prov.find("Dag") >= 0:
+if prov.find("Dog") >= 0:
     s07 = prov.replace("Dog", "Cat")
     print(s07)
 else:
@@ -33,6 +37,6 @@ else:
 
 
 # 문자열 prov 를 공백을 기준으로 자르고 그 결과를 출력하시오.
-arr = prov.split(" ")
+arr = prov.split(" ")  # 반한되는 값은 리스트다
 for i in arr:
     print(i, end=", ")
