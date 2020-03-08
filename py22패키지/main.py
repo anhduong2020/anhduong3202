@@ -12,7 +12,10 @@
 # game.sound 패키지의 echo 모듈을 가져옴
 # game.operation 패키지의 run 모듈을 가져옴
 
-# geometry 모듈의 triangle_area 함수 사용
+# game.graphic 패키지 geometry 모듈의 triangle_area 함수 사용
 
-# geometry 모듈의 rectangle_area 함수 사용
+# game.graphic 패키지 geometry 모듈의 rectangle_area 함수 사용
 
+# game.graphic 패키지 test 모듈의 test_graphic 함수 사용
+
+# game.operation 패키지 run 모듈의 render_test 함수 사용
