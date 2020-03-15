@@ -28,11 +28,63 @@
 #       서준서  247     61.75
 
 
-# 작업 순서 
-# 딕셔너리를 리턴하는 함수를 선언합니다.
-# 학생을 처리하는 함수를 선언합니다.
-# 학생 리스트를을 선언합니다.
-# 학생을 한 명씩 반복합니다.
+# 작업 순서
+# 딕셔너리를 리턴하는 함수를 선언합니다.create_student(이름, 국어,수학,영어,과학)
+# 학생을 처리하는 함수를 선언합니다. student_get_sum(student)
+# 학생 리스트를을 선언합니다.student_get_average(student)
+# 학생을 한 명씩 반복합니다.student_to_string(student)
+# main() 함수를 정의한다.
+# 1. 학생 리스트를 선언합니다.
+# 2. 학생을 한 명씩 반복하면서 이름, 합계, 평균을 출력한다.
+# main() 함수 호출
+
+# 코딩 하기
+
+def create_student(이름, 국어성적, 수학성적, 영어성적, 과학성적):
+    return {"이름": 이름,
+            "국어": 국어성적,
+            "수학": 수학성적,
+            "영어": 영어성적,
+            "과학": 과학성적}
 
 
-# 코딩 하기 
+def student_get_sum(student):
+    val = student["국어"] + student["수학"] + student["영어"] + student["과학"]
+    return val
+
+
+def student_get_average(student):
+    val = student_get_sum(student)
+    arg = val/4
+    return arg
+
+
+def student_to_string(student):
+    sum = student_get_sum(student)
+    arg = student_get_average(student)
+    str = "이름: %s, 국어: %s, 수학: %s, 영어: %s, 과학: %s, 총점: %s, 평균: %s" % (
+        student["이름"], student["국어"], student["수학"], student["영어"], student["과학"], sum, arg)
+    return str
+
+
+def main():
+    students = [
+        create_student('윤인성',  87,  98,  88, 95),
+        create_student('연하진',  92,  98,  96,  98),
+        create_student('구지연',  76,  96,  94,  90),
+        create_student('나선주',  98,  92,  96,  92),
+        create_student('윤아린',  95,  98,  98,  98),
+        create_student('윤명월',  64,  88,  92,  92),
+        create_student('김미화',  82,  86,  98,  88),
+        create_student('김연화',  88,  74,  78,  92),
+        create_student('박아현',  97,  92,  88,  95),
+        create_student('서준서',  45,  52,  72,  78)
+    ]
+
+    for student in students:
+        str = student_to_string(student)
+        print(str)
+
+
+if __name__ == "__main__":
+    main()

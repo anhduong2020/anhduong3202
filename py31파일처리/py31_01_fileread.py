@@ -20,7 +20,7 @@ prf = open(
     "C:/Python 20200209/Python기초20200103/st01.Python기초/py31파일처리/file/phones.txt", "r", encoding=("UTF-8"))
 line = prf.readline()
 while line != "":
-    print(s, end="")
+    print(line, end="")
     line = prf.readline()
 prf.close()
 #########################
